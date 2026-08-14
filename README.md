@@ -1,5 +1,7 @@
 # dsh-chat-outline — DeepSeek Harness Plugin
 
+[![awesome · DSH plugin](https://awesome-dsh-plugin.com/badge.svg)](https://awesome-dsh-plugin.com)
+
 对话一长就没法一直往上翻了。这个插件在对话栏左侧常驻一个对话大纲：按轮次列出每次提问和该轮最后一条回复，点击任意一条即可跳回对应位置。蓝框会始终标记你当前读到哪，随滚动跟随；顶部的输入框可以按关键词过滤。它读取全部历史来生成完整大纲，但只保留精简信息，不会把整个会话加载进内存。
 
 ![dsh-chat-outline 演示](docs/gif4.gif)

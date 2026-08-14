@@ -36,6 +36,8 @@ dsh plugin --profile web add github:liliuCourier/dsh-chat-outline
 
 最后刷新浏览器页面即可生效。
 
+> 从 0.1.6 起包内已含 `dsh.bundle`，通过 npm / GitHub 安装会自动激活，无需手动追加上面的 insert；手动 insert 仅对旧版本或源码目录安装适用。
+
 ### 使用
 
 面板常驻在对话栏左侧。每条记录分「我」和「助手」两行，点击任意一行即可跳转。面板顶部的输入框支持按关键词过滤。
@@ -97,6 +99,8 @@ Then add the following to `$DSH_HOME/profiles/web/cordis.patch.yml`:
 ```
 
 Finally, refresh the browser page.
+
+> Since 0.1.6 the package ships a `dsh.bundle` manifest, so npm / GitHub installs activate automatically — the manual insert above is only needed for older versions or source-folder installs.
 
 ### Usage
 

@@ -1,6 +1,8 @@
 # dsh-chat-outline — DeepSeek Harness Plugin
 
-对话栏左侧的常驻对话大纲。按轮次列出每次提问与最终回复，点击即可跳转到对应位置。
+对话一长就没法一直往上翻了。这个插件在对话栏左侧常驻一个对话大纲：按轮次列出每次提问和该轮最后一条回复，点击任意一条即可跳回对应位置。蓝框会始终标记你当前读到哪，随滚动跟随；顶部的输入框可以按关键词过滤。它读取全部历史来生成完整大纲，但只保留精简信息，不会把整个会话加载进内存。
+
+![dsh-chat-outline 演示](docs/gif4.gif)
 
 ## 中文文档
 
@@ -66,7 +68,9 @@ dsh plugin --profile web add github:liliuCourier/dsh-chat-outline
 
 ## English Documentation
 
-A persistent conversation outline on the left of the chat column, listing every question and its final reply by turn. Click any entry to jump to it.
+Long conversations make scrolling back painful. This plugin keeps a persistent outline on the left of the chat column: every question and its final reply, listed by turn, with one-click jump to any of them. A blue frame always marks where you are reading and follows the scroll, and the input at the top filters by keyword. It scans the full history to build a complete outline while keeping only compact data — the whole session is never loaded into memory.
+
+![dsh-chat-outline demo](docs/gif4.gif)
 
 ### Features
 

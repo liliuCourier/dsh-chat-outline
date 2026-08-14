@@ -70,8 +70,6 @@ dsh plugin --profile web add github:liliuCourier/dsh-chat-outline
 
 Long conversations make scrolling back painful. This plugin keeps a persistent outline on the left of the chat column: every question and its final reply, listed by turn, with one-click jump to any of them. A blue frame always marks where you are reading and follows the scroll, and the input at the top filters by keyword. It scans the full history to build a complete outline while keeping only compact data — the whole session is never loaded into memory.
 
-![dsh-chat-outline demo](docs/gif4.gif)
-
 ### Features
 
 - Covers the full session history and loads it automatically, no manual paging

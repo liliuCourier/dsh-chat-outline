@@ -2,7 +2,7 @@
 
 [![awesome · DSH plugin](https://awesome-dsh-plugin.com/badge.svg)](https://awesome-dsh-plugin.com)
 
-对话一长就没法一直往上翻了。这个插件在对话栏左侧常驻一个对话大纲：按轮次列出每次提问和该轮最后一条回复，点击任意一条即可跳回对应位置，按住 Ctrl/Shift 再点击则直接切到轨迹视图的同一位置。蓝框会始终标记你当前读到哪，随滚动跟随；顶部的输入框可以按关键词过滤。它读取全部历史来生成完整大纲，但只保留精简信息，不会把整个会话加载进内存。
+对话一长就没法一直往上翻了。这个插件在对话栏左侧常驻一个对话大纲：按轮次列出每次提问和该轮最后一条回复，点击任意一条即可跳回对应位置，按住 Ctrl/Shift 再点击则直接切到轨迹视图的同一位置。蓝框会始终标记你当前读到哪，随滚动跟随；顶部的输入框可以按关键词过滤。它有两种模式：默认的轻便模式只反映官方已加载的窗口，零额外开销；需要完整大纲时可切换到全面模式，进入即主动加载全部历史（长会话会有明显的性能开销）。
 
 ![dsh-chat-outline 演示](docs/gif4.gif)
 
@@ -10,10 +10,12 @@
 
 ### 功能特性
 
-- 覆盖完整会话历史，打开后自动加载，无需手动翻页
-- 点击任意条目，聊天区平滑滚动到对应消息
-- 按住 Ctrl/Shift 点击条目，直接切到轨迹视图并定位到对应位置
+- 按轮次列出每次提问与该轮最后一条回复，点击即定位
 - 蓝框标记当前阅读位置，随滚动跟随
+- 两种模式，头部按钮切换，选择会被记住：
+  - **轻便模式**（默认）：大纲只显示官方已加载窗口的内容，零额外加载；
+  - **全面模式**：进入即主动加载全部历史，覆盖整个会话
+- 按住 Ctrl/Shift 点击条目，直接切到轨迹视图并定位到对应位置
 - 支持按关键词过滤
 - 跟随 DSH 明暗主题
 
@@ -46,6 +48,17 @@ dsh plugin --profile web add github:liliuCourier/dsh-chat-outline
 ### 使用
 
 面板常驻在对话栏左侧。每条记录分「我」和「助手」两行，点击任意一行即可跳转。按住 Ctrl/Shift 再点击，会切到轨迹视图并定位到同一位置。面板顶部的输入框支持按关键词过滤。
+
+### 轻便模式与全面模式
+
+面板头部右侧有个模式按钮，点击即可在两种模式间切换，选择会被记住（下次打开仍是上次的模式）。
+
+![模式按钮位置（面板头部右侧）](docs/mode-toggle.png)
+
+- **轻便模式（默认）**：大纲只显示官方已加载窗口里的内容，插件不做任何额外的历史抓取，零性能开销。窗口只覆盖最近的一部分时，大纲里也只有最近的轮次；想看到更早的内容，点聊天区官方自带的「加载更早记录」按钮把窗口往前扩，大纲会跟着变全。
+- **全面模式**：进入会话（对话加载完成后）即主动分页加载全部历史，大纲覆盖整个会话，不用去点官方的加载按钮。
+
+> ⚠️ **性能警告**：全面模式会在后台逐页解析整个会话历史，长会话（尤其是带大量工具调用和流式输出的会话）会明显拖慢加载与整体响应，请按需开启。轻便模式没有这个问题。
 
 ### 对话与轨迹的跳转关系
 
@@ -80,14 +93,16 @@ dsh plugin --profile web add github:liliuCourier/dsh-chat-outline
 
 ## English Documentation
 
-Long conversations make scrolling back painful. This plugin keeps a persistent outline on the left of the chat column: every question and its final reply, listed by turn, with one-click jump to any of them — hold Ctrl/Shift while clicking to jump straight to the same spot in the Trajectory view. A blue frame always marks where you are reading and follows the scroll, and the input at the top filters by keyword. It scans the full history to build a complete outline while keeping only compact data — the whole session is never loaded into memory.
+Long conversations make scrolling back painful. This plugin keeps a persistent outline on the left of the chat column: every question and its final reply, listed by turn, with one-click jump to any of them — hold Ctrl/Shift while clicking to jump straight to the same spot in the Trajectory view. A blue frame always marks where you are reading and follows the scroll, and the input at the top filters by keyword. It has two modes: the default Light mode only reflects the officially loaded window with zero extra overhead; switch to Full mode for a complete outline, which actively loads the whole history on entry (noticeable overhead on long sessions).
 
 ### Features
 
-- Covers the full session history and loads it automatically, no manual paging
-- Click any entry to smoothly scroll the chat to the corresponding message
-- Ctrl/Shift+click an entry to jump straight to that position in the Trajectory view
+- Lists every question and its final reply by turn; click any entry to jump
 - A blue frame marks your current reading position and follows the scroll
+- Two modes, toggled by the button in the panel header; the choice is remembered:
+  - **Light mode** (default): the outline only reflects the officially loaded window — zero extra loading;
+  - **Full mode**: actively loads the whole history on entry, covering the entire session
+- Ctrl/Shift+click an entry to jump straight to that position in the Trajectory view
 - Filter by keyword
 - Follows the DSH light/dark theme
 
@@ -120,6 +135,17 @@ Finally, refresh the browser page.
 ### Usage
 
 The panel stays on the left of the conversation. Each entry has a "Me" row and an "AI" row; click either to jump. Hold Ctrl/Shift and click to switch to the Trajectory view at the same position. The input at the top filters the list by keyword.
+
+### Light mode and Full mode
+
+There is a mode button on the right of the panel header. Click it to switch between the two modes; your choice is remembered across restarts.
+
+![Mode button location (right of the panel header)](docs/mode-toggle.png)
+
+- **Light mode (default)**: the outline only shows what is inside the officially loaded window. The plugin does no extra history fetching, so there is zero performance overhead. When the window only covers the recent part of the session, the outline only lists the recent turns; to see older entries, click the official "load older records" button in the chat to extend the window — the outline follows.
+- **Full mode**: as soon as the conversation finishes loading, the plugin actively pages through the entire history so the outline covers the whole session, no official load button needed.
+
+> ⚠️ **Performance warning**: Full mode parses the whole session history in the background. Long sessions — especially ones with heavy tool calls and streaming output — will load and respond noticeably slower. Enable it only when you need the complete outline. Light mode has no such impact.
 
 ### How chat and trajectory jumps relate
 

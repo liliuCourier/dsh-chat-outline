@@ -12,6 +12,7 @@
 
 - 覆盖完整会话历史，打开后自动加载，无需手动翻页
 - 点击任意条目，聊天区平滑滚动到对应消息
+- 按住 Ctrl/Shift 点击条目，直接切到轨迹视图并定位到对应位置
 - 蓝框标记当前阅读位置，随滚动跟随
 - 支持按关键词过滤
 - 跟随 DSH 明暗主题
@@ -44,7 +45,7 @@ dsh plugin --profile web add github:liliuCourier/dsh-chat-outline
 
 ### 使用
 
-面板常驻在对话栏左侧。每条记录分「我」和「助手」两行，点击任意一行即可跳转。面板顶部的输入框支持按关键词过滤。
+面板常驻在对话栏左侧。每条记录分「我」和「助手」两行，点击任意一行即可跳转。按住 Ctrl/Shift 再点击，会切到轨迹视图并定位到同一位置。面板顶部的输入框支持按关键词过滤。
 
 ### 常见问题
 
@@ -76,6 +77,7 @@ Long conversations make scrolling back painful. This plugin keeps a persistent o
 
 - Covers the full session history and loads it automatically, no manual paging
 - Click any entry to smoothly scroll the chat to the corresponding message
+- Ctrl/Shift+click an entry to jump straight to that position in the Trajectory view
 - A blue frame marks your current reading position and follows the scroll
 - Filter by keyword
 - Follows the DSH light/dark theme
@@ -108,7 +110,7 @@ Finally, refresh the browser page.
 
 ### Usage
 
-The panel stays on the left of the conversation. Each entry has a "Me" row and an "AI" row; click either to jump. The input at the top filters the list by keyword.
+The panel stays on the left of the conversation. Each entry has a "Me" row and an "AI" row; click either to jump. Hold Ctrl/Shift and click to switch to the Trajectory view at the same position. The input at the top filters the list by keyword.
 
 ### Troubleshooting
 

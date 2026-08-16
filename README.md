@@ -53,9 +53,9 @@ dsh plugin --profile web add github:liliuCourier/dsh-chat-outline
 
 ### 轻便模式与全面模式
 
-面板头部右侧有个模式按钮，点击即可在两种模式间切换，选择会被记住（下次打开仍是上次的模式）。
+面板头部右侧有两个按钮：**模式按钮**（轻便/全面）切换两种模式，选择会被记住；最右侧的 **▸ 按钮**可收起（缩进）对话定位边栏、恢复对话全宽，收起后点聊天区左缘的 ☰ 重新展开。
 
-![模式按钮位置（面板头部右侧）](https://raw.githubusercontent.com/liliuCourier/dsh-chat-outline/main/docs/mode-toggle.png)
+![模式与收起按钮位置（面板头部右侧）](https://raw.githubusercontent.com/liliuCourier/dsh-chat-outline/main/docs/mode-toggle.png)
 
 - **轻便模式（默认）**：大纲只显示官方已加载窗口里的内容，插件不做任何额外的历史抓取，零性能开销。窗口只覆盖最近的一部分时，大纲里也只有最近的轮次；想看到更早的内容，点聊天区官方自带的「加载更早记录」按钮把窗口往前扩，大纲会跟着变全。
 - **全面模式**：进入会话（对话加载完成后）即主动分页加载全部历史，大纲覆盖整个会话，不用去点官方的加载按钮。
@@ -142,9 +142,9 @@ The panel stays on the left of the conversation as a fixed-width sidebar (the ch
 
 ### Light mode and Full mode
 
-There is a mode button on the right of the panel header. Click it to switch between the two modes; your choice is remembered across restarts.
+Two buttons sit on the right of the panel header: the **mode button** (Light/Full) switches between the two modes and remembers your choice; the rightmost **▸ button** collapses (retracts) the outline sidebar to restore full chat width — the floating ☰ on the left edge of the chat re-expands it.
 
-![Mode button location (right of the panel header)](https://raw.githubusercontent.com/liliuCourier/dsh-chat-outline/main/docs/mode-toggle.png)
+![Mode and collapse buttons (right of the panel header)](https://raw.githubusercontent.com/liliuCourier/dsh-chat-outline/main/docs/mode-toggle.png)
 
 - **Light mode (default)**: the outline only shows what is inside the officially loaded window. The plugin does no extra history fetching, so there is zero performance overhead. When the window only covers the recent part of the session, the outline only lists the recent turns; to see older entries, click the official "load older records" button in the chat to extend the window — the outline follows.
 - **Full mode**: as soon as the conversation finishes loading, the plugin actively pages through the entire history so the outline covers the whole session, no official load button needed.

@@ -2,7 +2,7 @@
 
 [![awesome · DSH plugin](https://awesome-dsh-plugin.com/badge.svg)](https://awesome-dsh-plugin.com)
 
-对话一长就没法一直往上翻了。这个插件在对话栏左侧常驻一个对话大纲：按轮次列出每次提问和该轮最后一条回复，点击任意一条即可跳回对应位置，按住 Ctrl/Shift 再点击则直接切到轨迹视图的同一位置。蓝框会始终标记你当前读到哪，随滚动跟随；顶部的输入框可以按关键词过滤。它有两种模式：默认的轻便模式只反映官方已加载的窗口，零额外开销；需要完整大纲时可切换到全面模式，进入即主动加载全部历史（长会话会有明显的性能开销）。
+对话一长就没法一直往上翻了。这个插件在对话栏左侧常驻一个侧边栏式对话大纲：按轮次列出每次提问和该轮最后一条回复，点击任意一条即可跳回对应位置，按住 Ctrl/Shift 再点击则直接切到轨迹视图的同一位置。蓝框会始终标记你当前读到哪，随滚动跟随；面板可一键收起以恢复对话全宽。顶部的输入框可以按关键词过滤。它有两种模式：默认的轻便模式只反映官方已加载的窗口，零额外开销；需要完整大纲时可切换到全面模式，进入即主动加载全部历史（长会话会有明显的性能开销）。
 
 ![dsh-chat-outline 演示](https://raw.githubusercontent.com/liliuCourier/dsh-chat-outline/main/docs/gif4.gif)
 
@@ -11,6 +11,8 @@
 ### 功能特性
 
 - 按轮次列出每次提问与该轮最后一条回复，点击即定位
+- 侧边栏式固定布局（260px），窄窗口也常驻显示，对话内容自动让位
+- 头部 ▸ 一键收起/展开，收起即恢复对话全宽
 - 蓝框标记当前阅读位置，随滚动跟随
 - 两种模式，头部按钮切换，选择会被记住：
   - **轻便模式**（默认）：大纲只显示官方已加载窗口的内容，零额外加载；
@@ -93,11 +95,13 @@ dsh plugin --profile web add github:liliuCourier/dsh-chat-outline
 
 ## English Documentation
 
-Long conversations make scrolling back painful. This plugin keeps a persistent outline on the left of the chat column: every question and its final reply, listed by turn, with one-click jump to any of them — hold Ctrl/Shift while clicking to jump straight to the same spot in the Trajectory view. A blue frame always marks where you are reading and follows the scroll, and the input at the top filters by keyword. It has two modes: the default Light mode only reflects the officially loaded window with zero extra overhead; switch to Full mode for a complete outline, which actively loads the whole history on entry (noticeable overhead on long sessions).
+Long conversations make scrolling back painful. This plugin keeps a persistent sidebar outline on the left of the chat column: every question and its final reply, listed by turn, with one-click jump to any of them — hold Ctrl/Shift while clicking to jump straight to the same spot in the Trajectory view. A blue frame always marks where you are reading and follows the scroll, and the panel can be collapsed with one click to restore full chat width. The input at the top filters by keyword. It has two modes: the default Light mode only reflects the officially loaded window with zero extra overhead; switch to Full mode for a complete outline, which actively loads the whole history on entry (noticeable overhead on long sessions).
 
 ### Features
 
 - Lists every question and its final reply by turn; click any entry to jump
+- Fixed-width sidebar layout (260px) that stays visible on narrow windows; the chat content makes room for it
+- Collapse/expand with the header ▸ button; collapsing restores full chat width
 - A blue frame marks your current reading position and follows the scroll
 - Two modes, toggled by the button in the panel header; the choice is remembered:
   - **Light mode** (default): the outline only reflects the officially loaded window — zero extra loading;

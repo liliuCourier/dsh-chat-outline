@@ -47,7 +47,7 @@ dsh plugin --profile web add github:liliuCourier/dsh-chat-outline
 
 ### 使用
 
-面板常驻在对话栏左侧。每条记录分「我」和「助手」两行，点击任意一行即可跳转。按住 Ctrl/Shift 再点击，会切到轨迹视图并定位到同一位置。面板顶部的输入框支持按关键词过滤。
+面板常驻在对话栏左侧，为固定宽度的侧边栏式布局（对话内容自动让位）。每条记录分「我」和「助手」两行，点击任意一行即可跳转。按住 Ctrl/Shift 再点击，会切到轨迹视图并定位到同一位置。面板头部右侧的 ▸ 可收起面板恢复对话全宽，收起后点聊天区左缘的 ☰ 重新展开。面板顶部的输入框支持按关键词过滤。
 
 ### 轻便模式与全面模式
 
@@ -134,7 +134,7 @@ Finally, refresh the browser page.
 
 ### Usage
 
-The panel stays on the left of the conversation. Each entry has a "Me" row and an "AI" row; click either to jump. Hold Ctrl/Shift and click to switch to the Trajectory view at the same position. The input at the top filters the list by keyword.
+The panel stays on the left of the conversation as a fixed-width sidebar (the chat content makes room for it). Each entry has a "Me" row and an "AI" row; click either to jump. Hold Ctrl/Shift and click to switch to the Trajectory view at the same position. The ▸ button at the right of the panel header collapses the panel to restore full chat width; the floating ☰ button on the left edge of the chat re-expands it. The input at the top filters the list by keyword.
 
 ### Light mode and Full mode
 

@@ -85,7 +85,7 @@ dsh plugin --profile web add github:liliuCourier/dsh-chat-outline
 
 ### 兼容性
 
-适配 DSH 0.1.0-rc.6。DSH 升级后如遇异常，请更新插件。
+适配 DSH 0.1.0-rc.7（已在 rc.7 上验证，暂未发现问题；rc.6 同样可用）。DSH 升级后如遇异常，请更新插件。
 
 ### 许可证
 
@@ -174,7 +174,7 @@ Both views share the same event numbering, so no matter which view you jump from
 
 ### Compatibility
 
-Works with DSH 0.1.0-rc.6. If you run into issues after a DSH upgrade, update the plugin.
+Works with DSH 0.1.0-rc.7 (verified on rc.7, no issues found so far; rc.6 also works). If you run into issues after a DSH upgrade, update the plugin.
 
 ### License
 
